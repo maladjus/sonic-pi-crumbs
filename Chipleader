@@ -1,0 +1,77 @@
+##Chipleader
+
+##Coded by Ted Harks
+
+use_synth :chiplead
+
+with_fx :slicer do
+  2.times do
+    play_chord chord(:C4, :m), sustain: 1.5
+    sleep 2
+    play_chord chord(:C4, :madd2), sustain: 1.5
+    sleep 2
+    play_chord chord(:A3, :madd9), sustain: 1.5
+    sleep 2
+    play_chord chord(:A3, :m), sustain: 1.5
+    sleep 2
+  end
+end
+
+in_thread do
+  4.times do
+    sample :bd_haus, amp: 0.5
+    sleep 2
+  end
+  2.times do
+    sample :bd_haus, amp: 0.5
+    sleep 1
+  end
+  4.times do
+    sample :bd_haus, amp: 0.5
+    sleep 0.5
+  end
+  8.times do
+    sample :bd_haus, amp: 0.5
+    sleep 0.25
+  end
+  16.times do
+    sample :bd_haus, amp: 0.5
+    sleep 0.125
+  end
+end
+
+with_fx :slicer do
+  2.times do
+    play_chord chord(:C4, :m), sustain: 1.5
+    sleep 2
+    play_chord chord(:C4, :madd2), sustain: 1.5
+    sleep 2
+    play_chord chord(:A3, :madd9), sustain: 1.5
+    sleep 2
+    play_chord chord(:A3, :m), sustain: 1.5
+    sleep 2
+  end
+end
+
+in_thread do
+  14.times do
+    sample :bd_haus, amp: 0.5
+    sleep 0.5
+    sample :bd_haus, amp: 0.5
+    sample :drum_snare_soft, start: 0.12, finish: 0.19, amp: 3, attack: 0.01, sustain: 0, release: 0.05
+    sleep 0.5
+  end
+end
+
+with_fx :slicer do
+  2.times do
+    play_chord chord(:C4, :m), sustain: 1.5
+    sleep 2
+    play_chord chord(:C4, :madd2), sustain: 1.5
+    sleep 2
+    play_chord chord(:A3, :madd9), sustain: 1.5
+    sleep 2
+    play_chord chord(:A3, :m), sustain: 1.5
+    sleep 2
+  end
+end
